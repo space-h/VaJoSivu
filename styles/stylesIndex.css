@@ -25,15 +25,26 @@ section {
 
 .parent {
 
-            display:flex;
-            background-color: lightblue;
-            height: 270px;
-            flex-direction: row;
-            flex-wrap: wrap;
-            justify-content: space-evenly;
-            align-items: stretch;
-            align-content: center;
+display:flex;
+background-color: lightblue;
+height: 200px;
+flex-direction: row;
+flex-wrap: wrap;
+justify-content: space-evenly;
+align-items: stretch;
+align-content: center;
         }
+.ForVideo {
+
+          display:flex;
+          background-color: lightblue;
+          height: flex;
+          flex-direction: row;
+          flex-wrap: wrap;
+          justify-content: space-evenly;
+          align-items: stretch;
+          align-content: center;
+      }
 
 .child {
   border-radius: 15px;
