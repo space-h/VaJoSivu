@@ -8,7 +8,9 @@
     <style>
 
     #blue-box{
-        background-color: blue;
+        background-image: url('../../images/portal.jpeg');
+        background-size: cover;
+    background-repeat: no-repeat;
         border-radius: 0%;
         width: 70px;
         height: 70px;
@@ -16,20 +18,15 @@
         top: 100px;
         left: 40px;
     }
-    .box{
-        background-color: aquamarine;
-        width: 600px;
-        height: 600px;
-        margin: 5px;
-        float: left;
-    }
+
 
     </style>
 
 </head>
 <body>
-    <h1> REACTION GAME </h1>
-    <p>Click the shapes as quickly as you can</p>
+    <h1> Worse than Neptabyss: Medivh Practice </h1>
+    <h2> Beta Version </h2>
+    <p>Click the Portal as quickly as you can</p>
     <p>Your time: <span id = "time"></span> </p>
     <div class="box">
         <button id="blue-box" class="box"></button>
@@ -41,15 +38,11 @@
         showBox = () => {
             const boxElement = document.getElementById('blue-box');
             boxElement.style.display = 'block';
-            const top = Math.random() * 200;
-            const left = Math.random() * 200;
-            const size = Math.random() * 200 + 50;
+            const top = Math.random() * 500;
+            const left = Math.random() * 500;
+            const size = Math.random() * 100 + 50;
 
-            if (Math.random() > 0.5) {
-                boxElement.style.borderRadius = "50%";
-            } else {
-                boxElement.style.borderRadius = "0%";
-            }
+
             
 
             boxElement.style.top = top + "px";
