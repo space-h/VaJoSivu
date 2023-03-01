@@ -30,9 +30,11 @@ body {
   .description {
     left: 50%;
     position: absolute;
-    top: 45%;
+    top: 65%;
     transform: translate(-50%, -55%);
     text-align: center;
+
+    
   }
   
   .description h1 {
