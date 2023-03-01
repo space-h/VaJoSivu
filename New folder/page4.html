@@ -28,14 +28,18 @@
     <h2> Beta Version </h2>
     <p>Click the Portal as quickly as you can</p>
     <p>Your time: <span id = "time"></span> </p>
+    <p>Your average: <span id = "average"></span> </p>
     <div class="box">
         <button id="blue-box" class="box"></button>
 
     </div>
 
     <script>
-             let startTime = new Date().getTime();
-        showBox = () => {
+            let counter = 0;
+            let incrementor = 0;
+            let average = 0;
+            let startTime = new Date().getTime();
+            showBox = () => {
             const boxElement = document.getElementById('blue-box');
             boxElement.style.display = 'block';
             const top = Math.random() * 500;
@@ -58,9 +62,19 @@
             setTimeout(showBox, Math.random() * 1500);
             const endTime = new Date().getTime();
             const duration = (endTime - startTime) / 1000;
-            console.log(duration);
+            console.log(average);
             document.getElementById("time").innerHTML = "<b>" + duration + "s</b>";
+            document.getElementById("average").innerHTML = Math.round(average * 100) / 100; //enemmän desimaaleja tarvitaan
+            counter++;
             
+            incrementor = incrementor + duration;
+            average = incrementor / counter;
+            if (counter == 10)
+            {
+                counter = 0;
+                incrementor = 0;
+                average = 0;
+            }            
         }
     </script>
 </body>
