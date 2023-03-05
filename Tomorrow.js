@@ -5,7 +5,7 @@ const TomorrowGetWeather = async () => {
   
       async function fetchData4Tommorw() {
         try {
-          const response4Tomorrow = await fetch('http://api.weatherapi.com/v1/forecast.json?key=5963687a74fe487fa31115547232702&q=Tampere&days=1&aqi=no&alerts=no');
+          const response4Tomorrow = await fetch('https://api.weatherapi.com/v1/forecast.json?key=5963687a74fe487fa31115547232702&q=Tampere&days=1&aqi=no&alerts=no');
           const json4tomorrow = await response4Tomorrow.json();
           let weatherDataTMR = json4tomorrow["current"];
           let locationDataTMR = json4tomorrow["location"];
