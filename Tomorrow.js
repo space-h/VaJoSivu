@@ -8,7 +8,7 @@ const TomorrowGetWeather = async () => {
           const json4tomorrow = await response4Tomorrow.json();
           let weatherDataTMR = json4tomorrow["current"];
           let locationDataTMR = json4tomorrow["location"];
-          total2 = "Tomorrow" + "\nLocation: " + locationDataTMR.name + "\nTemperature: " + weatherDataTMR.temp_c + " celsius\nCondition: " + weatherDataTMR.condition.text;
+          let total2 = "Tomorrow" + "\nLocation: " + locationDataTMR.name + "\nTemperature: " + weatherDataTMR.temp_c + " celsius\nCondition: " + weatherDataTMR.condition.text;
   
   
         } catch (error) {
