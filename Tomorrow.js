@@ -1,16 +1,19 @@
-
-
+let btnState = false;
 const TomorrowGetWeather = async () => {
-    try {
-      // FETCH AND PARSE LOGIC HERE
+    if (btnState) {
+        document.getElementById("huominensaa").innerText = "";
+        btnState = false;
+    } else {
+        try {
+      
   
       async function fetchData4Tommorw() {
         try {
-          const response = await fetch('https://api.weatherapi.com/v1/forecast.json?key=5963687a74fe487fa31115547232702&q=Tampere&days=1&aqi=no&alerts=no');
+          const response = await fetch('https://api.weatherapi.com/v1/forecast.json?key=5963687a74fe487fa31115547232702&q=Tampere&days=2&aqi=no&alerts=no');
           const json = await response.json();
 
           let forecastDay = json["forecast"]["forecastday"];
-          let tomorrow = forecastDay[0];
+          let tomorrow = forecastDay[1];
           let locationData = json["location"];
           
           
@@ -27,9 +30,12 @@ const TomorrowGetWeather = async () => {
       
       // This sets the HTML element
       document.getElementById("huominensaa").innerText = total;
+      btnState = true;
     } catch (error) {
       console.error(error);
     }
+    }
+    
   };
 
   

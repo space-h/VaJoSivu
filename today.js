@@ -1,7 +1,11 @@
 
+let btnState0 = false;
 const getWeather = async () => {
-  try {
-    // DO FETCH AND PARSE LOGIC HERE
+    if (btnState0) {
+        document.getElementById("saa").innerText = "";
+        btnState0 = false;
+    } else {
+        try {
 
     async function fetchData() {
       try {
@@ -22,9 +26,11 @@ const getWeather = async () => {
     
     // This sets the HTML element
     document.getElementById("saa").innerText = total;
+    btnState0 = true;
   } catch (error) {
     console.error(error);
   }
+}
 };
 
 document.getElementById("get-weather-btn").addEventListener("click", getWeather);
