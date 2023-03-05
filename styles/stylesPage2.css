@@ -39,6 +39,7 @@ body {
   
   .description h1 {
     color: #6ab446;
+    margin-top:auto;
   }
   
   .description p {
