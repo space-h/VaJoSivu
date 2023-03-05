@@ -1,3 +1,4 @@
+
 const getWeather = async () => {
   try {
     // DO FETCH AND PARSE LOGIC HERE
