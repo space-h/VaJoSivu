@@ -12,51 +12,60 @@
   <link href="./styles/stylesPage2.css" rel="stylesheet">
 </head>
 <body>
-  <nav class="navbar navbar-expand-md" id="bitToLeft">
+  <nav class="navbar navbar-expand-md">
     <a href="https://visittampere.fi/" class="navbar-brand">Visit Tampere</a>
-    <button class="navbar-toggler navbar-light" type="button" data-bs-toggle="collapse" data-bs-target="#main-navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+    <a href="./about.html" class="navbar-brand">About</a>
+    
+
+
     <div id="main-navigation" class="collapse navbar-collapse">
       <ul class="navbar-nav">
 
         <li class="nav-item">
-          <a class="nav-link" href="./about.html">About</a>
+          <button type="button" class="btn btn-primary" id="get-weather-btn">Weather Today</button>
+          <script src="./today.js"></script>
+          
+
+        <li class="nav-item">
+        <button type="button" class="btn btn-primary" id="get-weatherTomorrow-btn">Weather Tomorrow</button>
+        <script src="./Tomorrow.js"></script>
+
+          
+        <li class="nav-item">
+          <button type="button" class="btn btn-primary" id="get-sevenWeather-btn">Weather Next Week</button>
+          <script src="./weather7daysfromnow.js"></script>
+
+          <!-- <li class="nav-item">
+            <button type="button" class="btn btn-primary" id="tempDiv">Hide Picture</button>
+            <script src="Hidepic.js"></script> -->
+
           
       </ul>
+
     </div>
   </nav>
-  <header class="container-fluid">
-    <div class="description">
 
-      <h1><img src="https://images-webcams.windy.com/80/1545276780/daylight/full/1545276780.jpg" alt="Road View Camera"> </h1>
-    </div>
-    
-    
-  </header>
-  <article class="container features">
+      <article class="container features">
     <div class="row">
       <section class="col">
-        <button type="button" class="btn btn-primary" id="get-weather-btn">Weather</button>
         <div id="saa"></div>
-        <script src="./today.js"></script>
       </section>
 
       <section class="col">
-        <button type="button" class="btn btn-primary" id="get-weatherTomorrow-btn">Weather Tomorrow</button>
         <div id="huominensaa"></div>
-        <script src="./Tomorrow.js"></script>
       </section>
 
 
       <section class="col">
-        <button type="button" class="btn btn-primary" id="get-sevenWeather-btn">Weather next week</button>
         <div id="viikkoSaa"></div>
-        <script src="./weather7daysfromnow.js"></script>
         
       </section>
-    </div>
-  </article>
+
+
+      <img src="https://images-webcams.windy.com/80/1545276780/daylight/full/1545276780.jpg" class="img-fluid" alt="Road condition camera">
+
+
+
   
 </body>
 </html> 

@@ -13,7 +13,7 @@ const getWeather = async () => {
         const json = await response.json();
         let weatherData = json["current"];
         let locationData = json["location"];
-        total = "Current weather\nLocation: " + locationData.name + "\nTemperature: " + weatherData.temp_c + " celsius\nCondition: " + weatherData.condition.text;
+        total = "Current weather\nLocation: " + locationData.name + "\nTemperature: " + weatherData.temp_c + " celsius\nCondition: " + weatherData.condition.text +"\nUpdated: " +weatherData.last_updated ;
 
 
       } catch (error) {
