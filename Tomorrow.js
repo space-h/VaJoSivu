@@ -20,7 +20,8 @@ const TomorrowGetWeather = async () => {
           
                    
           
-          total = "Tomorrow" + "\nLocation: " + locationData.name + "\nTemperature: " + tomorrow.day.avgtemp_c + " celsius\nCondition: " + tomorrow.day.condition.text + "\nDate: " + tomorrow.date;
+          total2 = "Tomorrow" + "\nLocation: " + locationData.name + "\nTemperature: " + tomorrow.day.avgtemp_c + " celsius\nCondition: " + tomorrow.day.condition.text + "\nDate: " + tomorrow.date;
+          
         } catch (error) {
           console.log(error);
         }
@@ -30,13 +31,12 @@ const TomorrowGetWeather = async () => {
       await fetchData4Tommorw();
       
       // This sets the HTML element
-      document.getElementById("huominensaa").innerText = total;
+      document.getElementById("huominensaa").innerText = total2;
       btnState = true;
     } catch (error) {
       console.error(error);
     }
     }
-    
   };
 
   

@@ -27,9 +27,12 @@ body {
 .img-fluid{
   padding-top: auto;
   justify-content: center;
-  margin-top: 5cm;
-  scale: 100%;
+  margin-top: 3cm;
+  margin-bottom: 5cm;
+  scale: 85%;
   position:absolute;
+  border: #000;
+  border-style: double;
 }
 
 .nav-link {

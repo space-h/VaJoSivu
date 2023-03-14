@@ -1,3 +1,4 @@
+total3 = "";
 let btnState2 = false;
 const sevenWeather = async () => {
     if (btnState2) {
@@ -17,10 +18,8 @@ const sevenWeather = async () => {
           let sevenDayWeather = forecastDay[6];
           let locationData = json["location"];              
            
+          total3 = "Weather in 7 days" + "\nLocation: " + locationData.name + "\nTemperature: " + sevenDayWeather.day.avgtemp_c + " celsius\nCondition: " + sevenDayWeather.day.condition.text + "\nDate: " + sevenDayWeather.date;
           
-
-
-          total = "Weather in 7 days" + "\nLocation: " + locationData.name + "\nTemperature: " + sevenDayWeather.day.avgtemp_c + " celsius\nCondition: " + sevenDayWeather.day.condition.text + "\nDate: " + sevenDayWeather.date;
   
         } catch (error) {
           console.log(error);
@@ -31,7 +30,7 @@ const sevenWeather = async () => {
       await fetchData7Days();
       
       // This sets the HTML element
-      document.getElementById("viikkoSaa").innerText = total;
+      document.getElementById("viikkoSaa").innerText = total3;
       btnState2 = true;
     } catch (error) {
       console.error(error);

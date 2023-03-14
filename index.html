@@ -9,7 +9,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
   
   
-  <link href="./styles/stylesPage2.css" rel="stylesheet">
+  <link href="./styles/styles.css" rel="stylesheet">
 </head>
 <body>
   <nav class="navbar navbar-expand-md">
@@ -31,13 +31,10 @@
         <script src="./Tomorrow.js"></script>
 
           
-        <li class="nav-item">
+        //Removed button due to weatherAPI free trial ended, so forecast became unavailable
+        <li class="nav-item" style=visibility:hidden>
           <button type="button" class="btn btn-primary" id="get-sevenWeather-btn">Weather Next Week</button>
           <script src="./weather7daysfromnow.js"></script>
-
-          <!-- <li class="nav-item">
-            <button type="button" class="btn btn-primary" id="tempDiv">Hide Picture</button>
-            <script src="Hidepic.js"></script> -->
 
           
       </ul>
@@ -47,6 +44,7 @@
 
       <article class="container features">
     <div class="row">
+
       <section class="col">
         <div id="saa"></div>
       </section>
@@ -58,14 +56,12 @@
 
       <section class="col">
         <div id="viikkoSaa"></div>
-        
       </section>
 
 
       <img src="https://images-webcams.windy.com/80/1545276780/daylight/full/1545276780.jpg" class="img-fluid" alt="Road condition camera">
 
 
-
-  
+ 
 </body>
 </html> 
